@@ -6,7 +6,7 @@ public class Solution {
         int[] nge = new int[n];
         var stack = new Stack<int>();
         for(int i = n-1 ;i >=0 ;i--){
-            while(stack.Count >0 && stack.Peek() < nums[i]){
+            while(stack.Count >0 && stack.Peek() <= nums[i]){
                 stack.Pop();
             }
             if(stack.Count == 0){
